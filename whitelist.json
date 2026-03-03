@@ -1,0 +1,5 @@
+{
+  "WhitelistedIds": [12345678, 87654321],
+  "BlacklistedIds": [4354045624],
+  "SystemEnabled": true
+}
