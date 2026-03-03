@@ -1,11 +1,18 @@
--- SYSTEM DNIA I NOCY (TYLKO DLA UPRAWNIONYCH)
+--[[
+    Velsh0p Professional Day/Night Cycle
+--]]
 local Lighting = game:GetService("Lighting")
 
-print("[Velsh0p] System Dnia i Nocy aktywowany.")
+local DayNight = {}
 
-spawn(function()
-	while true do
-		Lighting.ClockTime = Lighting.ClockTime + 0.01 -- Prędkość czasu
-		task.wait(0.1)
-	end
-end)
+function DayNight.Start()
+	print("[Velsh0p] System Dnia i Nocy aktywowany pomyślnie.")
+	task.spawn(function()
+		while true do
+			Lighting.ClockTime = Lighting.ClockTime + 0.005 -- Wolniejsza, płynniejsza zmiana
+			task.wait(0.05)
+		end
+	end)
+end
+
+return DayNight
